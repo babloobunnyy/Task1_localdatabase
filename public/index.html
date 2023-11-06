@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>User Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">User Registration Form</h1>
+        <div class="content">
+            <form class="registration-form" id="registrationForm" action="/submit" method="POST">
+                <div class="user-details">
+                    <div class="input-box">
+                      <span class="details">Full Name</span>
+                      <input class="form-input" type="text" id="name" name="name" placeholder="Enter your name">
+                      <span class="error" id="nameError"></span>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Email</span>
+                      <input class="form-input" type="email" id="email" name="email" placeholder="Enter your username">
+                      <span class="error" id="emailError"></span>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">DOB</span>
+                      <input class="form-input" type="date" id="dob" name="dob" required>
+                      <span class="error" id="dobError"></span>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Address</span>
+                      <input class="form-input" type="text" id="address" name="address" placeholder="Enter your Address" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Phone-number</span>
+                      <input class="form-input" type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter your Phonenumber">
+                    </div>
+                  </div>
+                  <div class="gender-details">
+                    <input class="form-radio" type="radio" id="dot-1" name="gender" value="male" required checked>
+                    <input class="form-radio" type="radio" id="dot-2" name="gender" value="female" required>
+                    <input class="form-radio" type="radio" id="dot-3" name="gender" value="other" required>
+                    <span class="gender-title">Gender</span>
+                    <label class="form-label">Gender</label>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>                
+                  <div class="button">
+                    <input type="submit" value="Register">
+                  </div>
+            </form>
+            </div>
+        </div>
+        
+    <script src="index.js"></script>
+</body>
+</html>
